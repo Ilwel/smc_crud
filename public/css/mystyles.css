@@ -1,0 +1,58 @@
+.parallax{
+    position: relative;
+    padding-top: 300px;
+    padding-bottom: 300px;
+
+}
+
+.parallax::before{
+    content: '';
+
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    background-image: url(/img/grupo.png);
+    opacity: 0.3;
+
+
+}
+
+.parallax-text-content{
+
+    color: white;
+    
+
+}
+
+.content{
+
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+}
+
+.card-content{
+
+    opacity: 0.5;
+
+}
+
+.card-content:hover{
+
+    opacity: 1;    
+
+}
+
+.link-card{
+
+    text-decoration: none;
+
+}
