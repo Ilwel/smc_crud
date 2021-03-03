@@ -1,0 +1,44 @@
+
+<h3 class="text-light">Editar Ficha</h3>
+
+{{#each errs}}
+    <div class="alert alert-danger">{{text}}</div>
+{{else}}
+
+{{/each}}
+
+
+<div class="card bg-dark" >
+
+    <div class="card-body" >
+
+        <form action="/admin/sheets/edit" method="POST">
+
+            <input type="hidden" name="id" value="{{sheet.dataValues.id}}">
+
+            <label class="text-light" for="jogador">Jogador:</label>
+            <input type="text" id="jogador" name="jogador" placeholder="Nome do Jogador" class="form-control" value="{{sheet.dataValues._player}}">
+
+            <label class="text-light" for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Nome do Personagem" class="form-control" value="{{sheet.dataValues._char}}">
+
+            <label class="text-light" for="raça">Raça:</label>
+            <input type="text" id="raça" name="raça" placeholder="Raça do Personagem" class="form-control" value="{{sheet.dataValues._race}}">
+
+            <label class="text-light" for="passado">Passado:</label>
+            <input type="text" id="passado" name="passado" placeholder="Passado do Personagem" class="form-control" value="{{sheet.dataValues._past}}">
+
+            <label class="text-light" for="classe">Classe:</label>
+            <input type="text" id="classe" name="classe" placeholder="Classe do Personagem" class="form-control" value="{{sheet.dataValues._class}}">
+
+            <label class="text-light" for="oficio">Ofício:</label>
+            <input type="text" id="oficio" name="oficio" placeholder="Ofício do Personagem" class="form-control" value="{{sheet.dataValues._trade}}">
+
+            <button type="submit" class="btn btn-outline-light mt-4">Editar Personagem</button>
+
+        
+        </form>
+
+    </div>
+    
+</div>
